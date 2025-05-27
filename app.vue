@@ -2,7 +2,7 @@
   <div class="container">
     <div class="top-space"></div> <!-- Üstten boşluk -->
 
-    <h1>Lex Historia</h1>  <!-- Yeni başlık -->
+    <h1>Lex Historiae</h1>  <!-- Yeni başlık -->
     <h2 class="subtitle">Ebced Hesaplama Sayfası</h2>
 
     <!-- Arap Harfleri -->
