@@ -4,5 +4,4 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: ['@nuxt/fonts', '@nuxt/icon', '@nuxt/image'],
    ssr: false,
-  target: 'static',
 })
