@@ -1,5 +1,4 @@
 <template>
-
   <br v-for="x in 3" :key="x"/>
 
   <div class="container dark-theme">
@@ -8,19 +7,19 @@
 
     <div class="letters">
       <button
-        v-for="(value, letter) in ebcedTable"
+        v-for="letter in arabicAlphabet"
         :key="letter"
         @click="input += letter"
         class="letter-btn"
       >
-        {{ letter }}
-      </button>
+    {{ letter }}
+  </button>
     </div>
 
     <textarea
       v-model="input"
       placeholder="Tıklayarak veya klavyeyle Arapça metin girin"
-      rows="3"
+      rows="2"
       class="input-text"
     ></textarea>
 
@@ -57,6 +56,12 @@ const ebcedTable = {
   'ش': 300,'ت': 400,'ث': 500,'خ': 600,'ذ': 700,
   'ض': 800,'ظ': 900,'غ': 1000
 }
+
+const arabicAlphabet = [
+  'ا','ب','ت','ث','ج','ح','خ','د','ذ','ر',
+  'ز','س','ش','ص','ض','ط','ظ','ع','غ','ف',
+  'ق','ك','ل','م','ن','ه','و','ي'
+]
 
 const letters = computed(() => input.value.split('').filter(l => l.trim() !== ''))
 const total = computed(() => letters.value.reduce((acc, l) => acc + (ebcedTable[l] || 0), 0))
@@ -118,7 +123,8 @@ h1 {
 .letters {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  flex-direction: row-reverse;    /* Sağdan sola yazım */
+  justify-content: center;        /* 🔥 Ortala */
   gap: 0.6rem;
   margin-bottom: 1.4rem;
 }
@@ -197,7 +203,7 @@ h1 {
 }
 
 .results {
-  max-height: 180px;
+  max-height: 210px;
   overflow-y: auto;
   padding: 1.4rem 1.6rem 0.8rem;
 }
@@ -300,5 +306,4 @@ h1 {
     padding: 0.8rem 1.2rem;
   }
 }
-
 </style>
