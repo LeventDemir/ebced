@@ -95,7 +95,7 @@ html, body {
 .container {
   max-width: 720px;
   margin: 0 auto;
-  padding: 4rem 2rem 3rem;
+  padding: 3rem 2rem 3rem;
   background: #1f2937;
   border-radius: 14px;
   box-shadow: 0 10px 28px rgba(0, 0, 0, 0.5);
@@ -176,22 +176,28 @@ h1 {
 }
 
 .clear-btn {
-  background-color: #b91c1c;
-  color: white;
+  font-size: 1.1rem;
+  background: #374151;
   border: none;
-  padding: 0.55rem 1.3rem;
-  border-radius: 10px;
-  font-weight: 700;
+  border-radius: 8px;
+  padding: 0.3rem 0.7rem;
   cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
   user-select: none;
-  transition: background-color 0.25s ease;
-  box-shadow: 0 4px 12px rgb(185 28 28 / 0.5);
+  box-shadow: 0 2px 5px rgb(59 130 246 / 0.2);
+  color: #e5e7eb;
+  font-family: Monaco, monospace;
+  text-align: center;  /* yatay ortalama */
+  line-height: 1.5;    /* dikey ortalamaya yardım eder */
 }
 
+
 .clear-btn:hover {
-  background-color: #991b1b;
-  box-shadow: 0 6px 18px rgb(185 28 28 / 0.7);
+  background: #2563eb;
+  color: white;
+  box-shadow: 0 5px 15px rgb(59 130 246 / 0.5);
 }
+
 
 .results-wrapper {
   background: #1e293b;
@@ -203,7 +209,7 @@ h1 {
 }
 
 .results {
-  max-height: 210px;
+  max-height: 220px;
   overflow-y: auto;
   padding: 1.4rem 1.6rem 0.8rem;
 }
